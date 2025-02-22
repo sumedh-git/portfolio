@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sumedh Limburkar's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <nav id="desktop-nav">
+      <div class="logo">
+        <a href="#profile">Sumedh Limburkar</a>
+      </div>
+      <div class="theme-toggle-container">
+        <label class="theme-toggle-switch">
+          <input type="checkbox" id="theme-toggle" />
+          <span class="slider">
+            <span class="moon">🌙</span>
+            <span class="sun">☀️</span>
+          </span>
+        </label>
+      </div>
+      <div>
+        <ul class="nav-links">
+          <!-- <li><a href="#about">About</a></li> -->
+          <li><a href="#experience">EXPERIENCE</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Sumedh Limburkar</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <!-- <li><a href="#about" onclick="toggleMenu()">About</a></li> -->
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic-4-removebg.png" alt="Sumedh Limburkar profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">SUMEDH LIMBURKAR</h1>
+        <p class="section__text__p2">CS Grad at NCSU | Ex-Accenture</p>
+        <p class="section__text__p">I’m a Software Developer with a focus on backend engineering, cloud technologies, and event-driven systems. I enjoy exploring new tools and technologies, contributing to open-source projects, and continuously refining my skills. With hands-on experience in building production-level systems, my focus is on delivering high-quality, efficient solutions that meet both business goals and technical standards.</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Sumedh-Limburkar-Resume-Aug-2.pdf')"
+          >
+            Download Resume
+          </button>
+          <button class="btn btn-color-2" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/in/sumedh-limburkar/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/sumedh-git'"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>2+ years <br />Backend Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.E. Computer Engineering<br />M.S. Computer Science</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
+              reprehenderit et laborum, rem, dolore eum quod voluptate
+              exercitationem nobis, nihil esse debitis maxime facere minus sint
+              delectus velit in eos quo officiis explicabo deleniti dignissimos.
+              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
+              reiciendis ea magnam? Nulla, impedit fuga!
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section> -->
+    <section id="experience">
+      <p class="section__text__p1">Professional Journey</p>
+      <h1 class="title">Experience</h1>
+      <p class="expand-hint">Click cards to expand/collapse details ↓</p>
+      <div class="experience-container">
+        <!-- Experience Card 1 -->
+        <div class="experience-card">
+          <div class="card-header">
+            <img src="./assets/Accenture.jpg" alt="Accenture Logo" class="company-logo" />
+            <div class="card-title">
+              <h2 class="position-title">Software Engineer</h2>
+              <p class="date">March 2023 - June 2023</p>
+            </div>
+          </div>
+          <div class="skills-container">
+            <img src="./assets/java-logo.png" alt="Java" class="skill-icon" />
+            <img src="./assets/spring-boot-logo.png" alt="Spring Boot" class="skill-icon" />
+            <img src="./assets/rest-api-logo.png" alt="REST API" class="skill-icon" />
+            <img src="./assets/microsoft-sql-server-logo.svg" alt="Spring Boot" class="skill-icon" />
+            <img src="./assets/git-logo.png" alt="Git" class="skill-icon" />
+            <img src="./assets/maven-logo.png" alt="Maven" class="skill-icon" />
+          </div>
+          <div class="card-details">
+            <p><strong>Accenture Solutions Private Limited</strong> | Pune, India</p>
+            <ul>
+              <li>Mentored a team of 4 associates, improving team efficiency and increasing project completion rates by 15%.</li>
+              <li>Collaborated in Agile feature planning sessions, contributing to the successful launch of 11+ major features within a continuous integration (CI) environment.</li>
+              <li>Enhanced data security by implementing authentication and authorization mechanisms, achieving 100% compliance with corporate security protocols for AWS-hosted applications and safeguarding sensitive user data.</li>
+              <li>Developed reusable Java and Spring Boot components, reducing code maintenance by 20% and aligning with microservice architecture best practices.</li>
+              <li>Collaborated with cross-functional teams to analyze and optimize delivery pipelines in a DevOps environment, reducing deployment time by 30%.</li>
+            </ul>
+          </div>
+        </div>
+    
+        <!-- Experience Card 2 -->
+        <div class="experience-card">
+          <div class="card-header">
+            <img src="./assets/Accenture.jpg" alt="Accenture Logo" class="company-logo" />
+            <div class="card-title">
+              <h2 class="position-title">Junior Software Engineer</h2>
+              <p class="date">December 2020 - February 2023</p>
+            </div>
+          </div>
+          <div class="skills-container">
+            <img src="./assets/java-logo.png" alt="Java" class="skill-icon" />
+            <img src="./assets/kafka-logo.png" alt="Apache Kafka" class="skill-icon" />
+            <img src="./assets/mysql-logo.png" alt="MySQL" class="skill-icon" />
+            <img src="./assets/spring-boot-logo.png" alt="Spring Boot" class="skill-icon" />
+            <img src="./assets/gitlab-logo.jpg" alt="GitLab" class="skill-icon" />
+            <img src="./assets/gradle_logo.png" alt="Gradle" class="skill-icon" />
+            <img src="./assets/jira-logo.png" alt="Gradle" class="skill-icon" />
+            <img src="./assets/openshift-logo.svg" alt="Openshift" class="skill-icon" />
+            <img src="./assets/swagger-logo.jpeg" alt="Swagger" class="skill-icon" />
+          </div>
+          <div class="card-details">
+            <p><strong>Accenture Solutions Private Limited</strong> | Pune, India</p>
+            <ul>
+              <li>Developed and optimized RESTful APIs and Kafka components, improving system performance and functionality.</li>
+              <li>Conducted unit and integration testing with JUnit, maintaining 90% code coverage and reducing bugs across microservices.</li>
+              <li>Reduced API response time by 20% through code optimization and SQL query refinement, improving retrieval efficiency.</li>
+              <li>Produced in-depth technical documentation, including architecture diagrams and API design, leading to a 15% reduction in support tickets due to clearer instructions of backend processes.</li>
+              <li>Monitored and troubleshooted production applications, identifying and resolving defects to reduce downtime by 25% and improve operational stability.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+        
+    
+    <section id="skills">
+      <p class="section__text__p1">Skills & Expertise</p>
+      <h1 class="title">My Skills</h1>
+    
+      <!-- Tab Buttons -->
+      <div class="skill-tabs">
+        <button class="tab-button active" data-tab="core-dev">Core Development</button>
+        <button class="tab-button" data-tab="cloud-devops">Cloud & DevOps</button>
+        <button class="tab-button" data-tab="data-databases">Data & Databases</button>
+        <button class="tab-button" data-tab="tools-platforms">Tools & Platforms</button>
+      </div>
+    
+      <!-- Tab Content -->
+      <div class="tab-content">
+        <!-- Core Development -->
+        <div id="core-dev" class="skills-grid active">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./assets/java-logo-2.png" alt="Java" />
+            </div>
+            <h3 class="skill-title">Java</h3>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./assets/python-logo.png" alt="Python" />
+            </div>
+            <h3 class="skill-title">Python</h3>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./assets/javascript-logo.png" alt="JavaScript" />
+            </div>
+            <h3 class="skill-title">JavaScript</h3>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./assets/spring-boot-logo.png" alt="Spring Boot" />
+            </div>
+            <h3 class="skill-title">Spring Boot</h3>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./assets/react-logo.png" alt="React" />
+            </div>
+            <h3 class="skill-title">React</h3>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./assets/kafka-logo.png" alt="Apache Kafka" />
+            </div>
+            <h3 class="skill-title">Apache Kafka</h3>
+          </div>
+        </div>
+    
+        <!-- Cloud & DevOps -->
+        <div id="cloud-devops" class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./assets/aws-logo.png" alt="AWS" />
+            </div>
+            <h3 class="skill-title">AWS</h3>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./assets/docker-logo.png" alt="Docker" />
+            </div>
+            <h3 class="skill-title">Docker</h3>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./assets/kubernetes-logo.png" alt="Kubernetes" />
+            </div>
+            <h3 class="skill-title">Kubernetes</h3>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./assets/jenkins-logo.png" alt="Jenkins" />
+            </div>
+            <h3 class="skill-title">Jenkins</h3>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./assets/terraform-logo.png" alt="Terraform" />
+            </div>
+            <h3 class="skill-title">Terraform</h3>
+          </div>
+        </div>
+    
+        <!-- Data & Databases -->
+        <div id="data-databases" class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./assets/mysql-logo.png" alt="MySQL" />
+            </div>
+            <h3 class="skill-title">MySQL</h3>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./assets/mongodb-logo.png" alt="MongoDB" />
+            </div>
+            <h3 class="skill-title">MongoDB</h3>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./assets/postgresql-logo.png" alt="PostgreSQL" />
+            </div>
+            <h3 class="skill-title">PostgreSQL</h3>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./assets/oracle-logo.png" alt="Oracle" />
+            </div>
+            <h3 class="skill-title">Oracle</h3>
+          </div>
+        </div>
+    
+        <!-- Tools & Platforms -->
+        <div id="tools-platforms" class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./assets/git-logo.png" alt="Git" />
+            </div>
+            <h3 class="skill-title">Git</h3>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./assets/jira-logo.png" alt="Jira" />
+            </div>
+            <h3 class="skill-title">Jira</h3>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./assets/postman-logo.png" alt="Postman" />
+            </div>
+            <h3 class="skill-title">Postman</h3>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./assets/swagger-logo.png" alt="Swagger" />
+            </div>
+            <h3 class="skill-title">Swagger</h3>
+          </div>
+        </div>
+    
+    </section>
+    
+        
+    <section id="projects">
+      <p class="section__text__p1">Explore My Work</p>
+      <h1 class="title">Projects</h1>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="./assets/project-1.png" alt="Project 1" />
+          </div>
+          <h3 class="project-title">Event-Driven Microservices</h3>
+          <p class="project-description">
+            Built a scalable event-driven system using Apache Kafka and Spring Boot to handle real-time data processing.
+          </p>
+          <div class="project-technologies">
+            <span class="technology-badge">Java</span>
+            <span class="technology-badge">Spring Boot</span>
+            <span class="technology-badge">Kafka</span>
+            <span class="technology-badge">Docker</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/your-repo" target="_blank">GitHub</a>
+            <a href="https://live-demo.com" target="_blank">Live Demo</a>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="./assets/project-2.png" alt="Project 2" />
+          </div>
+          <h3 class="project-title">Cloud-Based E-Commerce Platform</h3>
+          <p class="project-description">
+            Developed a full-stack e-commerce platform using React, Node.js, and AWS, with features like user authentication and payment integration.
+          </p>
+          <div class="project-technologies">
+            <span class="technology-badge">React</span>
+            <span class="technology-badge">Node.js</span>
+            <span class="technology-badge">AWS</span>
+            <span class="technology-badge">MongoDB</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/your-repo" target="_blank">GitHub</a>
+            <a href="https://live-demo.com" target="_blank">Live Demo</a>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="./assets/project-3.png" alt="Project 3" />
+          </div>
+          <h3 class="project-title">Real-Time Chat Application</h3>
+          <p class="project-description">
+            Created a real-time chat app using WebSocket, React, and Node.js, enabling instant messaging and group chats.
+          </p>
+          <div class="project-technologies">
+            <span class="technology-badge">React</span>
+            <span class="technology-badge">Node.js</span>
+            <span class="technology-badge">WebSocket</span>
+            <span class="technology-badge">PostgreSQL</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/your-repo" target="_blank">GitHub</a>
+            <a href="https://live-demo.com" target="_blank">Live Demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">samlimburkar99@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/sumedh-limburkar/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>Developed by Sumedh Limburkar</p>
+      <button onclick="scrollToTop()" id="scrollTopBtn">↑</button>
+    <script src="script.js"></script>
+  </body>
+</html>
