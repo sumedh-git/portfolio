@@ -1513,3 +1513,153 @@ body::before {
 [data-theme="dark"] {
   --particle-color: rgba(255, 255, 255, 0.5);
 }
+
+/* mediaqueries.css */
+@media screen and (max-width: 768px) {
+  /* General adjustments */
+  section {
+    margin: 0 1rem !important;
+    padding: 2rem 1rem !important;
+    height: auto !important;
+    min-height: 100vh;
+  }
+
+  /* Navigation */
+  #desktop-nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .menu-links {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--navbar-bg);
+    backdrop-filter: blur(10px);
+  }
+
+  /* Profile Section */
+  #profile {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    padding-top: 4rem;
+  }
+
+  .section__pic-container {
+    width: 250px;
+    height: 250px;
+  }
+
+  .section__text .title {
+    font-size: 2rem;
+  }
+
+  .section__text__p {
+    text-align: center;
+  }
+
+  .btn-container {
+    flex-direction: column;
+  }
+
+  /* Experience Section */
+  .experience-card {
+    padding: 1rem;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skills-container {
+    justify-content: center;
+  }
+
+  /* Skills Section */
+  .skill-tabs {
+    flex-wrap: wrap;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .skill-card {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  /* Projects Section */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  /* Contact Section */
+  .contact-info-upper-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Footer */
+  footer {
+    height: auto;
+    padding: 1rem;
+  }
+
+  /* Text adjustments */
+  h1.title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .section__text__p2 {
+    font-size: 1.2rem;
+  }
+
+  /* Navigation text */
+  .logo {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Further adjustments for small phones */
+  .section__pic-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .skill-card {
+    padding: 0.5rem;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .technology-badge {
+    font-size: 0.7rem;
+  }
+}

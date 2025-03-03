@@ -125,3 +125,14 @@ document.getElementById('theme-toggle').addEventListener('change', () => {
 
 // Initialize
 createParticles();
+
+// Close menu when clicking outside
+if(menu.classList.contains('open')) {
+  document.addEventListener('click', function closeMenu(e) {
+    if(!e.target.closest('.hamburger-menu')) {
+      menu.classList.remove('open');
+      icon.classList.remove('open');
+      document.removeEventListener('click', closeMenu);
+    }
+  });
+}
