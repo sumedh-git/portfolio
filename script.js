@@ -93,3 +93,35 @@ tabButtons.forEach((button) => {
     document.getElementById(tabId).classList.add("active");
   });
 });
+
+// Add to script.js
+function createParticles() {
+  const particles = document.getElementById('particles');
+  const particleCount = 50;
+
+  for (let i = 0; i < particleCount; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    particle.style.cssText = `
+      width: ${Math.random() * 3 + 2}px;
+      height: ${Math.random() * 3 + 2}px;
+      left: ${Math.random() * 100}%;
+      top: ${Math.random() * 100}%;
+      animation: float ${Math.random() * 10 + 5}s linear infinite;
+    `;
+    particles.appendChild(particle);
+  }
+}
+
+// Update particle color on theme change
+document.getElementById('theme-toggle').addEventListener('change', () => {
+  document.documentElement.style.setProperty(
+    '--particle-color',
+    document.documentElement.getAttribute('data-theme') === 'dark' 
+      ? 'rgba(255, 255, 255, 0.5)' 
+      : 'rgba(0, 0, 0, 0.3)'
+  );
+});
+
+// Initialize
+createParticles();
