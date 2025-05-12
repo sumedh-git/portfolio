@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-    <div id="particles"></div>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <nav id="desktop-nav">
       <div class="logo">
@@ -53,17 +52,18 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic-4-removebg.png" alt="Sumedh Limburkar profile picture" />
+        <img src="./assets/IMG_Portfolio.jpg" alt="Sumedh Limburkar profile picture" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">SUMEDH LIMBURKAR</h1>
         <p class="section__text__p2">CS Grad at NCSU | Ex-Accenture</p>
-        <p class="section__text__p">I’m a Software Developer with a focus on backend engineering, cloud technologies, and event-driven systems. I enjoy exploring new tools and technologies, contributing to open-source projects, and continuously refining my skills. With hands-on experience in building production-level systems, my focus is on delivering high-quality, efficient solutions that meet both business goals and technical standards.</p>
+        <p class="section__text__p3">📍 Raleigh, NC, USA (Open to relocation)</p>
+        <p class="section__text__p">I'm a Software Developer with a focus on backend engineering, cloud technologies, and event-driven systems. I enjoy exploring new tools and technologies, contributing to open-source projects, and continuously refining my skills. With hands-on experience in building production-level systems, my focus is on delivering high-quality, efficient solutions that meet both business goals and technical standards.</p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./assets/Sumedh-Limburkar-Resume-Aug-2.pdf')"
+            onclick="window.open('./assets/Sumedh-Limburkar-Resume-05-12-2025')"
           >
             Download Resume
           </button>
@@ -376,8 +376,7 @@
             <span class="technology-badge">Docker</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/your-repo" target="_blank">GitHub</a>
-            <a href="https://live-demo.com" target="_blank">Live Demo</a>
+            <a href="https://github.com/your-repo" target="_blank">GitHub Link</a>
           </div>
         </div>
         <!-- Project 2 -->
@@ -396,8 +395,7 @@
             <span class="technology-badge">MongoDB</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/your-repo" target="_blank">GitHub</a>
-            <a href="https://live-demo.com" target="_blank">Live Demo</a>
+            <a href="https://github.com/your-repo" target="_blank">GitHub Link</a>
           </div>
         </div>
         <!-- Project 3 -->
@@ -416,37 +414,69 @@
             <span class="technology-badge">PostgreSQL</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/your-repo" target="_blank">GitHub</a>
-            <a href="https://live-demo.com" target="_blank">Live Demo</a>
+            <a href="https://github.com/your-repo" target="_blank">GitHub Link</a>
           </div>
         </div>
       </div>
     </section>
+    
+    <!-- Contact Section -->
     <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:examplemail@gmail.com">samlimburkar99@gmail.com</a></p>
+      <div class="contact-wrapper">
+        <div class="contact-header">
+          <h2>Let's Connect</h2>
+          <p>Have a question or want to work together?</p>
         </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/sumedh-limburkar/">LinkedIn</a></p>
+
+        <div class="contact-container">
+          <form class="contact-form" action="https://formspree.io/f/xovelzkp" method="POST">
+            <div class="form-group">
+              <input type="text" name="name" required placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" required placeholder="Your Email">
+            </div>
+            <div class="form-group">
+              <textarea name="message" required placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+          </form>
+
+          <div class="contact-info">
+            <div class="info-item">
+              <img src="./assets/email.png" alt="Email" class="info-icon">
+              <a href="mailto:samlimburkar99@gmail.com">samlimburkar99@gmail.com</a>
+            </div>
+            <div class="info-item">
+              <img src="./assets/linkedin.png" alt="LinkedIn" class="info-icon">
+              <a href="https://www.linkedin.com/in/sumedh-limburkar/">Connect on LinkedIn</a>
+            </div>
+            <div class="info-item">
+              <div class="info-icon location-icon">📍</div>
+              <div class="location-text">
+                <span>Raleigh, NC, USA</span>
+                <span class="relocation-text">(Open to relocation)</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <div class="social-links">
+      <a href="https://github.com/sumedh-git" target="_blank" class="social-link">
+        <img src="./assets/github.png" alt="GitHub">
+      </a>
+      <a href="https://linkedin.com/in/sumedh-limburkar/" target="_blank" class="social-link">
+        <img src="./assets/linkedin.png" alt="LinkedIn">
+      </a>
+    </div>
+
     <footer>
       <p>Developed by Sumedh Limburkar</p>
+      <p class="copyright">© 2024 All Rights Reserved</p>
       <button onclick="scrollToTop()" id="scrollTopBtn">↑</button>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
